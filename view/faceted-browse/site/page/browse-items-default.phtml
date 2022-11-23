@@ -1,0 +1,32 @@
+<?php
+$headingTerm = $this->siteSetting('browse_heading_property_term');
+$bodyTerm = $this->siteSetting('browse_body_property_term');
+?>
+<ul class="resource-list">
+    <?php foreach ($items as $item): ?>
+    <?php
+    $heading = $headingTerm ? $item->value($headingTerm, ['default' => $this->translate('[Untitled]')]) : $item->displayTitle();
+    $body = $bodyTerm ? $item->value($bodyTerm) : $item->displayDescription();
+    ?>
+    <li class="item resource box">
+        <div class="thumb">
+        <?php if ($itemThumbnail = $this->thumbnail($item, 'medium')): ?>
+            <?php echo $item->linkRaw($itemThumbnail); ?>
+        <?php endif; ?>
+        </div>
+
+        <h4 title="<?php echo $item->title(); ?>"><?php echo $item->link($heading); ?></h4>
+
+        <div class="meta">
+            <?php if($date = $item->value('dcterms:issued')): ?>
+                <span class="year"><?php echo $date; ?></span>
+            <?php endif; ?>
+
+            <?php if($creator = $item->value('dcterms:creator')): ?>
+                <?php if($date): ?>&ndash;<?php endif; ?>
+                <span class="creator"><?php echo $creator; ?></span>
+            <?php endif; ?>
+        </div>
+    </li>
+    <?php endforeach; ?>
+</ul>
