@@ -8,7 +8,7 @@ See the theme in action at [gpura.org/collections](https://gpura.org/collections
 
 ## Installation
 
-Download the latest release from the [releases page](/indic/archive/bookshelf/releases).
+Download the latest release from the [releases page](/indic-archive/bookshelf/releases).
 
 
 ## License
