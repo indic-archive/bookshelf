@@ -4,6 +4,8 @@
 
 See the theme in action at [gpura.org/collections](https://gpura.org/collections)
 
+![Preview](https://raw.githubusercontent.com/indic-archive/bookshelf/master/theme.jpg)
+
 ## Installation
 
 Download the latest release from the [releases page](/indic/archive/bookshelf/releases).
