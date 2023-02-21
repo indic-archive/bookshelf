@@ -21,6 +21,25 @@
 <?php $this->trigger('view.show.before'); ?>
 
 <div class="individual-item">
+	<div class="media box">
+		<?php if ($embedMedia && $itemMedia): ?>
+		    <div class="media-embeds">
+		    <?php foreach ($itemMedia as $media):
+		        echo $media->render();
+		    endforeach;
+		    ?>
+		    </div>
+		<?php endif; ?>
+
+		<?php if (!$embedMedia && $itemMedia): ?>
+		<div class="media-list">
+		    <?php foreach ($itemMedia as $media): ?>
+		        <?php echo $media->linkPretty(); ?>
+		    <?php endforeach; ?>
+		</div>
+		<?php endif; ?>
+	</div>
+
 	<div class="metadata">
 		<?php echo $item->displayValues(); ?>
 
@@ -44,25 +63,6 @@
 		</div>
 		<?php endif; ?>
 	</div><!-- meta -->
-
-	<div class="media box">
-		<?php if ($embedMedia && $itemMedia): ?>
-		    <div class="media-embeds">
-		    <?php foreach ($itemMedia as $media):
-		        echo $media->render();
-		    endforeach;
-		    ?>
-		    </div>
-		<?php endif; ?>
-
-		<?php if (!$embedMedia && $itemMedia): ?>
-		<div class="media-list">
-		    <?php foreach ($itemMedia as $media): ?>
-		        <?php echo $media->linkPretty(); ?>
-		    <?php endforeach; ?>
-		</div>
-		<?php endif; ?>
-	</div>
 </div>
 
 <?php
