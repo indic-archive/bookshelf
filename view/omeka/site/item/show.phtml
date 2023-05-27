@@ -24,10 +24,14 @@ foreach ($itemMedia as $m) {
 	<div class="media box">
 		<?php if ($embedMedia && $itemMedia) : ?>
 			<div class="media-embeds">
-				<?php foreach ($itemMedia as $media) :
-					echo $media->render();
-				endforeach;
-				?>
+				<?php foreach ($itemMedia as $media): ?>
+					<?php echo $media->render(); ?>
+					<?php if($url = $media->originalUrl()): ?>
+						<p>
+							<a class="button"> href="<?php echo $url; ?>">Download (<?php echo strtoupper(pathinfo($url, PATHINFO_EXTENSION)); ?>)</a>
+						</p>
+					<?php endif; ?>
+				<?php endforeach; ?>
 			</div>
 		<?php endif; ?>
 
