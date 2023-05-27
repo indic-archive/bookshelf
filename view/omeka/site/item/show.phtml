@@ -28,7 +28,7 @@ foreach ($itemMedia as $m) {
 					<?php echo $media->render(); ?>
 					<?php if($url = $media->originalUrl()): ?>
 						<p>
-							<a class="button"> href="<?php echo $url; ?>">Download (<?php echo strtoupper(pathinfo($url, PATHINFO_EXTENSION)); ?>)</a>
+							<a class="button" href="<?php echo $url; ?>">Download (<?php echo strtoupper(pathinfo($url, PATHINFO_EXTENSION)); ?>)</a>
 						</p>
 					<?php endif; ?>
 				<?php endforeach; ?>
