@@ -320,6 +320,11 @@ header nav ul {
     }
 }
 
+header nav > ul > li {
+    font-family: "Manjari", sans-serif;
+    font-size: $base-font-size;
+}
+
 header nav > ul > li:last-child {
     border-bottom: 1px solid $light;
     padding-bottom: -1px;
