@@ -2,7 +2,7 @@
 
 ## Preview
 
-See the theme in action at [gpura.org/collections](https://gpura.org/collections)
+See the theme in action at [gpura.org/main/collections]((https://gpura.org/main/collections))
 
 ![Preview](https://raw.githubusercontent.com/indic-archive/bookshelf/master/theme.jpg)
 
